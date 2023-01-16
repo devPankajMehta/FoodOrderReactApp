@@ -10,6 +10,14 @@
 
     }
 
+    static async getRestaurentDetails(id){
+        
+      const url="https://www.swiggy.com/dapi/menu/v4/full?lat=28.7040592&lng=77.10249019999999&menuId="+id;
+      const data= await fetch(url)
+     
+     return  await data.json();
+    }
+
 }
 
 export default Service;

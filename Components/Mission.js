@@ -2,7 +2,10 @@ const Mission = ()=>{
 
     return (
         <div>
-            Mission
+            <p>
+
+                our mission is to porive online food to everyone
+            </p>
         </div>
     )
 }

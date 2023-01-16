@@ -28,13 +28,15 @@ const Main = ()=>{
                     
                     return(
                         (   
-                            <Link to={"/restaurent/id="+item?.data.id}>
+                           
                                                   
-                            <div key={index} className="card"> 
+                            <div  className="card"> 
+                             <Link to={"/restaurent/"+item?.data.id} key={index}>
                             {console.log(IMAGEURL)}
                                 <div className="imageDiv">
                                     <img width="100%"  src={IMAGEURL + item.data.cloudinaryImageId}  />
                                 </div>
+                                </Link> 
                                 <div className="resNameDeatails">
                                     {item?.data?.slugs.restaurant}
                                 </div>
@@ -44,8 +46,9 @@ const Main = ()=>{
                                     <div className="cardFlexBottomItem"><span> {item?.data?.maxDeliveryTime} mins</span></div>
                                     <div className="cardFlexBottomItem"><span> {item?.data?.costForTwoString}</span></div>
                                 </div>
+                                
                             </div>
-                            </Link> 
+                            
                         )
         
                     )

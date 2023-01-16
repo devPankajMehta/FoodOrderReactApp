@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Contacts from "./Components/Contacts";
 import Main from "./Components/Main";
 import Mission from "./Components/Mission";
+import Menu from "./Components/Menu";
 
 
 /*
@@ -67,6 +68,10 @@ const RouteConfig = createBrowserRouter(
                 {
                     path:"/mission",
                     element: <Mission />
+                },
+                {
+                    path:"/restaurent/:id",
+                    element: <Menu />
                 }
             ]
         }

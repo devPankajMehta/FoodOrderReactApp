@@ -1,7 +1,15 @@
 
 const Contacts = ()=>(
     <div>
-        Contacts
+        <p>
+
+This is contact is page
+
+        </p>
+
+        <p>
+        contact
+        </p>
     </div>
 )
 
