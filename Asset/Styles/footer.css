@@ -1,0 +1,7 @@
+.footer{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
