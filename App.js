@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React, { Children, useContext } from "react";
 import {createRoot} from "react-dom/client";
 import Header from "./Components/Header";
 import "./style.css";
@@ -10,7 +10,8 @@ import Contacts from "./Components/Contacts";
 import Main from "./Components/Main";
 import Mission from "./Components/Mission";
 import Menu from "./Components/Menu";
-
+import store from "./Helpers/store";
+import { Provider } from "react-redux";
 
 /*
   React element is normal js variable which contains valid JSX expersion
@@ -27,18 +28,31 @@ const appheader= (
   Functional Component is JS funciton which return valid JSX
 */
 const App = () => 
-     (      
-        <div>
-              <Header></Header>
+     { 
 
-              <div id="MainAppDiv">
+       
+
+        
+        return(
+
+        
+        <div>
+           
+           <Provider store={store}> 
+                <Header></Header>
+            
+              
+
+              <div className="flex" id="MainAppDiv">
                   <Outlet />
               </div>
               
               <Footer></Footer>
+              </Provider>
               
         </div>
-)
+        )
+}
 
 
 /*

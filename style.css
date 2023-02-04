@@ -1,26 +1,3 @@
-.appTitle{
-
-    margin:auto;
-    font-size: 15px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-#MainAppDiv{
-    min-height: 600px;
-}
-
-.flex-Container{
-    display: flex;
-    
-}
-
-@media screen and (min-width: 967px) and (max-width: 1127px) {
-
-}
-
-@media screen and (max-width: 967px) {
-    .flex-Container{
-        flex-direction: column;
-    }
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
