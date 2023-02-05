@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import Service from "../Services/Service";
 import { useState ,useEffect } from "react";
 import IMAGEURL from "../Helpers/Constant";
+import { useDispatch } from "react-redux";
+import { addItem } from "../Helpers/cartSlice";
 
 
 const Menu = ()=>{
@@ -21,6 +23,14 @@ const Menu = ()=>{
         
 
     },[]);
+
+    const dispatch =useDispatch();
+
+    const handelAddItem =(item)=>{
+      
+        dispatch(addItem(item));
+
+    }
     
 
     return(
@@ -36,7 +46,7 @@ const Menu = ()=>{
                                     {
                                     restaurant.map((item)=>{
                                              return(
-                                                 <li>{item.name}</li>
+                                                 <li>{item.name}  <button onClick={()=>{handelAddItem(item)}}>add</button></li>
                                              )
                                     })
                                 }

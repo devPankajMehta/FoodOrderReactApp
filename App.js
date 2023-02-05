@@ -12,6 +12,7 @@ import Mission from "./Components/Mission";
 import Menu from "./Components/Menu";
 import store from "./Helpers/store";
 import { Provider } from "react-redux";
+import Cart from "./Components/Cart";
 
 /*
   React element is normal js variable which contains valid JSX expersion
@@ -82,6 +83,10 @@ const RouteConfig = createBrowserRouter(
                 {
                     path:"/mission",
                     element: <Mission />
+                },
+                {
+                    path:"/cart",
+                    element: <Cart />
                 },
                 {
                     path:"/restaurent/:id",

@@ -17,15 +17,27 @@ const Header =()=> {
 
     return ( 
        <div className="flex">
-            <div className="flex">
+
+<div class="flex flex-wrap">
+  <div class="flex-auto w-14 h-14">
+    01
+  </div>
+  <div class="flex-auto w-64 ...">
+    02
+  </div>
+  <div class="flex-auto w-32 ...">
+    03
+  </div>
+</div>
+            <div className="flex flex-initial">
                 <img src={logo} className="object-contain h-10 w-2" width="40"/>
             </div>
-            <div className="w-7/12">
+            <div className="w-7/12 flex-initial">
             
                <input className="inputHeaderSearch" type="text" />
                <div className="inputSearchButton">Search</div>
             </div>
-            <div className="w-4/12">
+            <div className="w-4/12 flex-initial">
             
                <div className="headerUserInfo"></div>
                 <ul className="headerNavLinks">
@@ -34,6 +46,7 @@ const Header =()=> {
                 <li className="haederLinks"><Link to="/mission">Mission</Link></li>
                 <li className="haederLinks"><Link to="/about" >About us</Link></li>
                 <li className="haederLinks"><Link to="/contact">Contacts</Link> </li>
+                <li className="haederLinks"> <Link to="/cart">Cart</Link></li>
                     
                 </ul>
                 

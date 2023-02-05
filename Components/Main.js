@@ -21,15 +21,7 @@ const Main = ()=>{
 
     },[]);
 
-   const dispatch=useDispatch();
 
-    const handelClickItem=()=>{
-           dispatch(addItem("grapes"));
-    }
-
-    const handelRemoveItem=()=>{
-        dispatch(removeItem())
-    }
 
     return(
         <div className="mainDiv">
@@ -58,8 +50,6 @@ const Main = ()=>{
                                     <div className="cardFlexBottomItem"><span> {item?.data?.costForTwoString}</span></div>
                                 </div>
 
-                                <div onClick={handelClickItem}>Add</div>
-                                <div onClick={handelRemoveItem}>Remove</div>
                                 
                             </div>
                             
